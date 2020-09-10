@@ -3,7 +3,7 @@ const util = require('util');
 const path = require('path');
 const readline = require('readline');
 const chalk = require('chalk');
-const moment = require('moment-timezone');
+const moment = require('dayjs');
 const figures = require('figures');
 const pkgConf = require('pkg-conf');
 const pkg = require('./../package.json');
@@ -56,11 +56,7 @@ class Signale {
   }
 
   get date() {
-    return moment().tz(this._config.timeZone).format(this._config.formatDate);
-  }
-
-  get timestamp() {
-    return moment().tz(this._config.timeZone).format(this._config.formatTime);
+    return moment().format(this._config.formatDate);
   }
 
   get filename() {

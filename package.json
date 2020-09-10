@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "chalk": "^2.3.2",
+    "dayjs": "^1.8.35",
     "figures": "^2.0.0",
     "moment-timezone": "^0.5.31",
     "pkg-conf": "^2.1.0"
