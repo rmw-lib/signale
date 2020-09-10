@@ -5,11 +5,11 @@ module.exports = {
   error: {
     badge: figures.cross,
     color: 'red',
-    label: 'error',
+    label: '',
     logLevel: 'error'
   },
   fatal: {
-    badge: figures.cross,
+    badge: "❌",
     color: 'red',
     label: 'fatal',
     logLevel: 'error'
