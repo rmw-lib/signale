@@ -67,11 +67,15 @@ class Signale {
 
     const callers = stack.map(x => x.getFileName());
 
-    const firstExternalFilePath = callers.find(x => {
+    var firstExternalFilePath = callers.find(x => {
       return x !== callers[0];
     });
 
-    return firstExternalFilePath ? path.basename(firstExternalFilePath) : 'anonymous';
+    if(firstExternalFilePath){
+      firstExternalFilePath = firstExternalFilePath.split("/")
+      firstExternalFilePath = firstExternalFilePath.slice(-3).join('/')
+    }
+    return firstExternalFilePath ? firstExternalFilePath : 'anonymous';
   }
 
   get fileLine() {
@@ -166,11 +170,11 @@ class Signale {
   }
 
   _formatDate() {
-    return `[${this.date}]`;
+    return `${this.date}`;
   }
 
   _formatFilename(displayLine) {
-    return `[${this.filename}${displayLine ? `:${this.fileLine}` : ''}]`;
+    return `${this.filename}${displayLine ? `:${this.fileLine}` : ''}`;
   }
 
   _formatScopeName() {
