@@ -1,6 +1,6 @@
 {
   "name": "@rmw/signale",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "Highly configurable logging utility",
   "license": "MIT",
   "repository": "klaussinani/signale",
